@@ -12,6 +12,11 @@ const App = () => {
         <img src={logo} alt="logo"
         className = "w-28 object-contain" />
       </Link>
+      <Link to="/create-post" className='font-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md'>Create</Link>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/create-post" element={<CreatePost />}/>
+      </Routes>
     </header>
    </BrowserRouter>
   )
