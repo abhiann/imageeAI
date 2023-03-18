@@ -17,10 +17,12 @@ const CreatePost = () => {
 
   }
   const handleChange = (e) =>{
+    setForm({...form, [e.target.name]: e.target.value })
 
   }
   const handleSurpriseMe =() =>{
-
+    const randomPrompt = getRandomPrompt(form.prompt);
+    setForm({...form, prompt: randomPrompt })
   }
 
   const generateImage =() =>{
@@ -37,9 +39,9 @@ const CreatePost = () => {
       <form className='mt-16 max-w-3x1' onSubmit={handleSubmit}>
         <div>
           <FormField
-            labelName='Prompt'
+            labelName='Your name'
             type='text'
-            name='prompt'
+            name='name'
             placeholder='John Doe'
             value={form.name}
             handleChange={handleChange}
