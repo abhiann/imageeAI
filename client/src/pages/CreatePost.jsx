@@ -54,7 +54,7 @@ const CreatePost = () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-          },
+          }, 
           body: JSON.stringify({prompt: form.prompt}),
         })
         const data = await response.json();
@@ -107,7 +107,7 @@ const CreatePost = () => {
               <img 
                 src={preview}
                 alt="preview"
-                className='w-9//12 h-9/12 object-contain opacity-40'
+                className='w-9/12 h-9/12 object-contain opacity-40'
               />
             )}
             {generatingImg && (
